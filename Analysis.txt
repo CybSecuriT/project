@@ -1,0 +1,59 @@
+AnyDesk logs are located on following paths and can be exported from the image file using FTK,Encase,Axiom etc.
+
+Installed version
+Path:
+C:\ProgramData\AnyDesk\
+	Logs File found :
+	connection_trace.txt
+	ad_svc.trace (found in install version only)
+	service.conf
+	system.conf
+%USERPROFILE%\AppData\Roaming\Anydesk
+	Logs File found :
+	ad.trace
+	user.conf	
+	Chat Logs
+	
+
+PE version
+Path:
+%USERPROFILE%\AppData\Roaming\Anydesk
+	Logs File found :
+	connection_trace.txt
+	ad.trace
+	service.conf
+	system.conf
+	user.conf
+	chat logs
+
+Step1:
+First we need to begins with connection_trace.txt log file, this file reveals information about:
+Incoming connection Date/Time
+Status for request: User-denotes Requst Accepted 
+					Rejected-denotes Requst Accepted
+					Passwd/Token-Authentication used
+Incoming Connection AnyDesk ID
+Now we can proceed with other log files,Use information gain from connection_trace log related to timestamp and Remote AnyDesk ID
+Note:connection_trace.txt hold informationspecific to incoming connection only.
+
+Step2:
+We can obtain systems/host Anydesk ID from the system.conf log file.
+
+Step3:
+ad.trace log file will reveals information about:
+Andesk version of host and Host Operating System
+Confirmation on Installion status, and execution timestamp Install statussame version not installed 
+Unistallation status
+Connection & Error events
+Incoming connection AnyDesk ID , User Name, Timestamp ,Remote Anydesk version & Remote Operating system details
+Outgoing Connection Request, Remote AnyDesk ID(ID to which connection is send) , Timestamp
+
+Step3:
+ad.trace log file is only available for installed version of AnyDesk and reveals information about:
+Incoming connection AnyDesk ID, and IP address
+Incoming connection AnyDesk ID, and IP address
+
+
+
+
+
